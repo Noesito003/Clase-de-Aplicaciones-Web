@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class DirectivasComponent {
 
+  opcion1:number = 0;
+  opcion2:boolean = true ;
+
+  opcion3 = "";
 }

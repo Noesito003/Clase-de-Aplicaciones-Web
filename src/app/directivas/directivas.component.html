@@ -1,1 +1,56 @@
-<p>directivas works!</p>
+<h3>Basics NgModel</h3>
+<div class="d-flex justify-content-center mb-4">
+
+    <div>
+        <input type="radio" value="1" class="m-2" [(ngModel)]="opcion1">
+        <input type="radio" value="2" class="m-2" [(ngModel)]="opcion1">
+        <input type="radio" value="3" class="m-2" [(ngModel)]="opcion1">
+        <input type="radio" value="4" class="m-2" [(ngModel)]="opcion1">
+        <input type="radio" value="5" class="m-2" [(ngModel)]="opcion1">
+        <input type="radio" value="6" class="m-2" [(ngModel)]="opcion1">
+
+        <div class="input-group mt-4">
+            <input type="text" class="form-control" placeholder="Escribe un numero" aria-label="Escribe un numero"
+                aria-describedby="basic-addon1" [(ngModel)]="opcion1">
+            <br>
+        </div>
+
+        <span *ngIf="opcion1 > 6 || opcion1 < 1">Solo numeros del 1 al 6</span>
+    </div>
+</div>
+
+<h3>If Else Structure</h3>
+<div class="d-flex justify-content-center mb-4">
+
+    <div>
+        <input type="checkbox" [(ngModel)]="opcion2">
+
+        <div class="input-group mt-4">
+            <input type="text" class="form-control" readonly aria-describedby="basic-addon1" [(ngModel)]="opcion2">
+        </div>
+
+    </div>
+</div>
+
+<h3>Switch Case</h3>
+<div class="text-center mb-4">
+
+    <div class="mb-3">
+        <select [(ngModel)]="opcion3">
+            <option selected disabled value="0">Elige algo</option>
+            <option value="1">Primero</option>
+            <option value="2">Segundo</option>
+            <option value="3">Tercera</option>
+            <option value="4">Cuarta</option>
+        </select>
+    </div>
+
+    <div [ngSwitch]="opcion3">
+        <span *ngSwitchCase="1">Has elegido la primera opcion</span>
+        <span *ngSwitchCase="2">Ahora la segunda</span>
+        <span *ngSwitchCase="3">Vas por la tercera</span>
+        <span *ngSwitchCase="4">Por ultimo la cuarta</span>
+        <span *ngSwitchDefault="0">Elige una opcion</span>
+    </div>
+
+</div>

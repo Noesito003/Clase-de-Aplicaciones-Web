@@ -12,4 +12,13 @@ export class UrlGuard implements CanActivate {
     return true;
   }
   
+
+  // canActivate(): boolean {
+  //   if(!this.Login.isLogued()){
+  //     this.Router.navigate(['/inicio']);
+  //     return false
+  //   }
+
+  //   return true;
+  // }
 }
