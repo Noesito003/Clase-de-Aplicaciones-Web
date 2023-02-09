@@ -10,4 +10,8 @@ export class MenuComponent {
 
   constructor(public Login: LoginService) {}
 
+  Logout = () => {
+    this.Login.logout();
+  }
+
 }

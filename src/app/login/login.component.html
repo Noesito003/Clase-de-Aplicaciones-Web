@@ -3,7 +3,7 @@
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">@</span>
             <input type="text" class="form-control" placeholder="Username / Email" aria-label="Username / Email"
-                aria-describedby="basic-addon1">
+                aria-describedby="basic-addon1" [(ngModel)]="User.Email"  name="Email" >
         </div>
         
         
@@ -11,7 +11,9 @@
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">**</span>
             <input type="text" class="form-control" placeholder="Password" aria-label="Password"
-                aria-describedby="basic-addon1">
+                aria-describedby="basic-addon1" [(ngModel)]="User.Password" name="Password" >
         </div>
+
+        <button type="button" class="btn btn-primary" (click)="Login()">Login</button>
     </div>
 </div>
