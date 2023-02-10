@@ -8,8 +8,9 @@
         <button *ngSwitchCase="1" mat-button routerLink="empleado" class="m-1 btn btn-primary text-white">Employe</button>
         <button *ngSwitchCase="2" mat-button routerLink="cliente" class="m-1 btn btn-primary text-white">Customer</button>
         <button *ngSwitchCase="false" mat-button routerLink="producto" class="m-1 btn btn-primary text-white">Product</button>    
-        <button *ngSwitchCase="false" mat-button routerLink="login" class="m-1 btn btn-primary text-white">Login</button>
-        <button *ngSwitchCase="!false" (click)="Logout()"  mat-button class="m-1 btn btn-primary text-white">Logout</button>
+        <button *ngSwitchCase="false" mat-button routerLink="login" class="m-1 btn btn-success text-white">Login</button>
+        <button *ngSwitchCase="false" mat-button routerLink="register" class="m-1 btn btn-success text-white">Registrer</button>
+        <button *ngSwitchCase="!false" (click)="Logout()"  mat-button class="m-1 btn btn-danger text-white">Logout</button>
     </span>
 
 </div>

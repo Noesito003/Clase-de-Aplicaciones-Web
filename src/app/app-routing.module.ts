@@ -9,12 +9,14 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductoComponent } from './producto/producto.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'directivas', component: DirectivasComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   
   {path: 'menu', component: MenuComponent},
 

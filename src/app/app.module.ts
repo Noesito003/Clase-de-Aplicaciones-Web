@@ -18,9 +18,12 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductoComponent } from './producto/producto.component';
+import { RegisterComponent } from './register/register.component';
+
+//Services
 import { LoginService } from './services/login.service';
-import { ClienteService } from './services/cliente.service';
 import { ProductoService } from './services/producto.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { ProductoService } from './services/producto.service';
     InicioComponent,
     LoginComponent,
     MenuComponent,
-    ProductoComponent
+    ProductoComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { ProductoService } from './services/producto.service';
   ],
   providers: [
     LoginService,
-    ClienteService,
+    UserService,
     ProductoService,
   ],
   bootstrap: [AppComponent]
