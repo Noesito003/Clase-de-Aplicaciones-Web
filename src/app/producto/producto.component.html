@@ -1,82 +1,96 @@
-<div class="row d-flex justify-content-center">
-  <div class="col-5">
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">@</span>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Name of product"
-        aria-label="Name of product"
-        aria-describedby="basic-addon1"
-        [(ngModel)]="product.name"
-        name="name"
-      />
-    </div>
+<form>
+  <div class="row d-flex justify-content-center">
+    <div class="col-5">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Name of product"
+          aria-label="Name of product"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="product.name"
+          name="name"
+        />
+      </div>
 
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">Text</span>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Description"
-        aria-label="Description"
-        aria-describedby="basic-addon1"
-        [(ngModel)]="product.description"
-        name="Description"
-      />
-    </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Text</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Description"
+          aria-label="Description"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="product.description"
+          name="Description"
+        />
+      </div>
 
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">123</span>
-      <input
-        type="number"
-        class="form-control"
-        placeholder="Price"
-        aria-label="Price"
-        aria-describedby="basic-addon1"
-        [(ngModel)]="product.price"
-        name="price"
-      />
-    </div>
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">img</span>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Image"
-        aria-label="Image"
-        aria-describedby="basic-addon1"
-        [(ngModel)]="product.image"
-        name="image"
-      />
-    </div>
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">Cat</span>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Category"
-        aria-label="Category"
-        aria-describedby="basic-addon1"
-        [(ngModel)]="product.category"
-        name="category"
-      />
-    </div>
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">Size</span>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Size"
-        aria-label="Size"
-        aria-describedby="basic-addon1"
-        [(ngModel)]="product.size"
-        name="size"
-      />
-    </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">123</span>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Price"
+          aria-label="Price"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="product.price"
+          name="price"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">img</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Image"
+          aria-label="Image"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="product.image"
+          name="image"
+        />
+      </div>
+      <div *ngFor="let categories of category; let i = index">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Cat</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Category"
+            aria-label="Category"
+            aria-describedby="basic-addon1"
+            name="category"
+            [(ngModel)]="category[i]"
+            [ngModelOptions]="{ standalone: true, updateOn: 'blur' }"
+          />
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary m-2"
+        (click)="addCategory('')"
+      >
+        Add category</button
+      ><button type="button" class="btn btn-primary" (click)="showCategory()">
+        Show category
+      </button>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Size</span>
+        <input
+          type="texta"
+          class="form-control"
+          placeholder="Size"
+          aria-label="Size"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="product.size"
+          name="size"
+        />
+      </div>
 
-    <button type="button" class="btn btn-primary" (click)="setProduct()">
-      Add product
-    </button>
+      <button type="button" class="btn btn-primary" (click)="setProduct()">
+        Add product
+      </button>
+    </div>
   </div>
-</div>
+</form>

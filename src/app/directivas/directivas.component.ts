@@ -11,4 +11,11 @@ export class DirectivasComponent {
   opcion2:boolean = true ;
 
   opcion3 = "";
+
+  fruits = [
+    {name: 'apple', color: 'red'},
+    {name: 'banana', color: 'yellow'},
+    {name: 'orange', color: 'orange'},
+    {name: 'strawberry', color: 'red'},
+  ]
 }

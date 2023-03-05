@@ -53,4 +53,13 @@
         <span *ngSwitchDefault="0">Elige una opcion</span>
     </div>
 
+    <h3>Foreach</h3>
+
+    <div class="d-flex justify-content-center mb-4">
+        <div>
+            <div *ngFor="let fruit of fruits">
+                <span>{{fruit.name}}</span>
+            </div>
+        </div>
+
 </div>

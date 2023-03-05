@@ -11,14 +11,28 @@ export class ProductoComponent {
 
   constructor(private router: Router ,private producto: ProductoService) { }
 
+
+  category:String[] = [];
+
   product = {
     name: '',
     description: '',
     price: 0,
     image: '',
-    category: [],
+    category: this.category,
     size: [],
   }
+
+
+  showCategory = () => {
+    console.log(this.category);
+  }
+
+
+  addCategory = (category: String) => {
+    this.product.category.push(category)
+  }
+
 
 
   setProduct = () => {
