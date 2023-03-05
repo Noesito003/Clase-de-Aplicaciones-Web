@@ -66,27 +66,59 @@
           />
         </div>
       </div>
+
       <button
         type="button"
         class="btn btn-primary m-2"
         (click)="addCategory('')"
       >
-        Add category</button
-      ><button type="button" class="btn btn-primary" (click)="showCategory()">
+        Add category
+      </button>
+
+      <button type="button" class="btn btn-primary" (click)="showCategory()">
         Show category
       </button>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Size</span>
-        <input
-          type="texta"
-          class="form-control"
-          placeholder="Size"
-          aria-label="Size"
-          aria-describedby="basic-addon1"
-          [(ngModel)]="product.size"
-          name="size"
-        />
+
+      <div *ngFor="let size of sizes; let i = index">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Size</span>
+          <input
+            type="texta"
+            class="form-control"
+            placeholder="Size"
+            aria-label="Size"
+            aria-describedby="basic-addon1"
+            [(ngModel)]="sizes[i].name"
+            [ngModelOptions]="{ standalone: true, updateOn: 'blur' }"
+            name="size"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Size</span>
+          <input
+            type="texta"
+            class="form-control"
+            placeholder="Size"
+            aria-label="Size"
+            aria-describedby="basic-addon1"
+            [(ngModel)]=" sizes[i].quantity "
+            [ngModelOptions]="{ standalone: true, updateOn: 'blur' }"
+            name="stock"
+          />
+        </div>
       </div>
+
+      <button
+        type="button"
+        class="btn btn-primary m-2"
+        (click)="addSize()"
+      >
+        Add Size
+      </button>
+
+      <button type="button" class="btn btn-primary" (click)="showSize()">
+        Show category
+      </button>
 
       <button type="button" class="btn btn-primary" (click)="setProduct()">
         Add product

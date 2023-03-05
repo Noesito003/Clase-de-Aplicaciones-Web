@@ -2,17 +2,36 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductoService } from '../services/producto.service';
 
+interface size  {
+  name: String;
+  quantity: Number,
+}
+
 @Component({
   selector: 'app-producto',
   templateUrl: './producto.component.html',
   styleUrls: ['./producto.component.css']
 })
+
+
+
+
 export class ProductoComponent {
 
-  constructor(private router: Router ,private producto: ProductoService) { }
+
+  constructor(private router: Router ,private producto: ProductoService) {
+
+
+
+
+  }
+
+
 
 
   category:String[] = [];
+
+  sizes:size[] = [];
 
   product = {
     name: '',
@@ -20,7 +39,7 @@ export class ProductoComponent {
     price: 0,
     image: '',
     category: this.category,
-    size: [],
+    size: this.sizes,
   }
 
 
@@ -33,6 +52,15 @@ export class ProductoComponent {
     this.product.category.push(category)
   }
 
+
+
+  showSize = () => {
+    console.log(this.sizes);
+  }
+
+  addSize = () => {
+    this.sizes.push({name: '', quantity: 0})
+  }
 
 
   setProduct = () => {
